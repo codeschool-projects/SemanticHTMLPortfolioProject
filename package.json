@@ -1,0 +1,19 @@
+{
+  "name": "semantic-html-portfolio-project",
+  "version": "1.0.0",
+  "description": "Convert a document to use semantic HTML.",
+  "private": true,
+  "scripts": {
+    "start": "browser-sync start --server ./src --files ./src",
+    "test": "mocha test/*.spec.js",
+    "deploy:github-pages": "git subtree push --prefix src origin gh-pages"
+  },
+  "author": "Adam Fortuna <adam@codeschool.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.14.0",
+    "chai": "^3.5.0",
+    "jsdom": "^9.4.1",
+    "mocha": "^3.0.1"
+  }
+}
