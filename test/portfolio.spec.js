@@ -36,7 +36,7 @@ describe('The webpage', () => {
     });
 
     it('should remove the existing class @nav', () => {
-      const nav = doc.querySelector('header .nav');
+      const nav = doc.querySelector('.nav');
       assert.isOk(!nav, 'We no longer need an element with a class of `.nav`. Go ahead and remove it.');
     });
   });
