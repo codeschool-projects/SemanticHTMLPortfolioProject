@@ -6,7 +6,7 @@
   "scripts": {
     "start": "browser-sync start --server ./src --files ./src",
     "test": "mocha --colors test/*.spec.js",
-    "test:watch": "watch-run -p 'src/index.html' npm run test",
+    "test:watch": "watch-run -p 'src/index.html,test/portfolio.spec.js' npm run test",
     "deploy:github-pages": "git subtree push --prefix src origin gh-pages"
   },
   "author": "Adam Fortuna <adam@codeschool.com>",

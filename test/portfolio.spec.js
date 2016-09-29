@@ -39,6 +39,11 @@ describe('The webpage', () => {
       const nav = doc.querySelector('.nav');
       assert.isOk(!nav, 'We no longer need an element with a class of `.nav`. Go ahead and remove it.');
     });
+
+    it('should still contain a ul @nav', () => {
+      const nav = doc.querySelector('nav ul');
+      assert.isOk(nav, 'We still need a `ul` element within our `nav`.');
+    });
   });
 
 
@@ -48,20 +53,20 @@ describe('The webpage', () => {
   describe('section', () => {
     it('should convert the tagline @section', () => {
       const el = doc.querySelector('.tagline');
-      assert.isOk(el.length > 0, 'Looks like you removed the element with a class of `.tagline`. You will still need that, but will need to change it\'s element.');
+      assert.isOk(el, 'Looks like you removed the element with a class of `.tagline`. You will still need that, but will need to change it\'s element.');
       assert.equal(el.tagName.toLowerCase(), 'section', 'Make sure to change the element with a class of `tagline` to a `section` element.');
     });
 
     it('should convert the skills @section', () => {
       const el = doc.querySelector('.skills');
-      assert.isOk(el.length > 0, 'Looks like you removed the element with a class of `.skills`. You will still need that, but will need to change it\'s element.');
-      assert.equal(skillsWithHtml.tagName.toLowerCase(), 'section', 'Make sure to change the element with a class of `skills` to a `section` element.');
+      assert.isOk(el, 'Looks like you removed the element with a class of `.skills`. You will still need that, but will need to change it\'s element.');
+      assert.equal(el.tagName.toLowerCase(), 'section', 'Make sure to change the element with a class of `skills` to a `section` element.');
     });
 
     it('should convert the contact @section', () => {
       const el = doc.querySelector('.contact');
-      assert.isOk(el.length > 0, 'Looks like you removed the element with a class of `.contact`. You will still need that, but will need to change it\'s element.');
-      assert.equal(skillsWithHtml.tagName.toLowerCase(), 'section', 'Make sure to change the element with a class of `contact` to a `section` element.');
+      assert.isOk(el, 'Looks like you removed the element with a class of `.contact`. You will still need that, but will need to change it\'s element.');
+      assert.equal(el.tagName.toLowerCase(), 'section', 'Make sure to change the element with a class of `contact` to a `section` element.');
     });
   });
 
@@ -76,7 +81,7 @@ describe('The webpage', () => {
     });
 
     it('should not exist @main', () => {
-      const sections = doc.querySelector('main section');
+      const sections = doc.querySelectorAll('main section');
       assert.isOk(sections.length >= 3, 'Make sure to move all of the `section` elements into our new `main` element.');
     });
   });
