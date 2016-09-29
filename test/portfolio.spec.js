@@ -95,7 +95,7 @@ describe('The webpage', () => {
       assert.isOk(footer, 'We need a `footer` element.');
     });
 
-    it('should not exist @main', () => {
+    it('should not exist @footer', () => {
       const footer = doc.querySelector('.footer');
       assert.isOk(!footer, 'Remove the `footer` class. Since we\'re using semantic HTML, we no longer need that one.');
     });
