@@ -20,11 +20,22 @@ h1, h2, h3, h4 {
   margin: 10px 0 15px;
 }
 
+.nav, nav {
+  display: inline;
+  list-style: none;
+  margin: 1em 0;
+  padding: 0;
+}
+.nav li, nav li {
+  display: inline;
+  margin-right: 1em;
+}
+
 p, ul {
   margin: 10px 0;
 }
 
-ul li {
+.skills ul li {
   margin-left: 30px;;
 }
 
@@ -44,6 +55,10 @@ a:hover {
 a:active {
   position: relative;
   top: 1px;
+}
+
+a.active {
+  border-bottom: none;
 }
 
 .content-wrapper {
