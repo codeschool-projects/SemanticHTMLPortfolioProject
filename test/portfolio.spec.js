@@ -21,7 +21,7 @@ describe('The webpage', () => {
 
     it('should not exist @header', () => {
       const header = doc.querySelector('.header');
-      assert.isOk(!header, 'Make sure to remote the `.header` class -- we no longer need it.');
+      assert.isOk(!header, 'Make sure to remove the `.header` class -- we no longer need it.');
     });
   });
 
