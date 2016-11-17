@@ -5,17 +5,26 @@
   "private": true,
   "scripts": {
     "start": "browser-sync start --server ./src --files ./src",
-    "test": "mocha --colors test/*.spec.js",
+    "test": "mocha --colors --compilers js:babel-register test/*.spec.js",
     "test:watch": "watch-run -p 'src/index.html,test/portfolio.spec.js' npm run test",
     "deploy:github-pages": "git subtree push --prefix src origin gh-pages"
   },
   "author": "Adam Fortuna <adam@codeschool.com>",
   "license": "MIT",
   "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "babel-register": "^6.18.0",
     "browser-sync": "^2.14.0",
     "chai": "^3.5.0",
     "jsdom": "^9.4.1",
     "mocha": "^3.0.1",
     "watch-run": "^1.2.4"
+  },
+  "engines": {
+    "node": ">=4.6",
+    "npm": ">=2.15"
+  },
+  "babel": {
+    "presets": ["es2015"]
   }
 }
