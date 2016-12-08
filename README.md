@@ -62,3 +62,15 @@ Our 3 main sections make up the focus of our page. Wrap these three sections (ta
 ### Footer
 
 Lastly, the element with a class of `footer` isn't the most semantic use of that area either. Luckily HTML 5 has a much better element we can use for footers. Update this element to use the semantically correct tag.
+
+## Next Steps
+
+Now that your site is working, the next step would be to deploy it to production!
+
+Putting this site up on GitHub pages is a bit different than some other projects because the code is all in the `/src` directory. There’s a nifty way to push this directory to a GitHub branch, which allows you to use GitHub pages with it! Try running this Git command for this project:
+
+```
+git subtree push --prefix src origin gh-pages
+```
+
+This will push the `src` folder up to GitHub on the `gh-pages` branch. After that, you should be able to open up `http://username.github.io/SemanticHTMLPortfolioProject`, where `username` is your GitHub username.
